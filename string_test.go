@@ -1,7 +1,6 @@
-package strutil_test
+package strutil
 
 import (
-	"strutil"
 	"testing"
 )
 
@@ -26,7 +25,7 @@ func TestReverse(t *testing.T) {
 
 	for _, tc := range testcases {
 		t.Run(tc.input, func(t *testing.T) {
-			if v := strutil.Reverse(tc.input); tc.expected != v {
+			if v := Reverse(tc.input); tc.expected != v {
 				t.Errorf("expected %s, actual %s", tc.expected, v)
 			}
 		})
