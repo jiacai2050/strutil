@@ -1,6 +1,13 @@
 package strutil
 
+import "log"
+
+func init() {
+	log.SetFlags(log.Llongfile | log.LstdFlags)
+}
+
 func Reverse(s string) string {
+	log.Printf("reverse in v1...")
 	runes := []rune(s)
 
 	for i := 0; i < len(runes)/2; i++ {
